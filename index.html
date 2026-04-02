@@ -21,7 +21,7 @@ body {
   width: 90%;
   max-width: 360px;
   margin: auto;
-  box-shadow: 0 0 20px #cc00ff;
+  box-shadow: 0 0 25px #cc00ff;
 }
 
 button {
@@ -52,22 +52,22 @@ input {
 
 <div class="caja">
 
-<h2>📩 Mensaje</h2>
-<p>No deberías abrir esto…</p>
+<h2>💜 Archivo: 00:00</h2>
+<p>“Todo empieza en un momento…”</p>
 
 <button onclick="inicio()">Abrir</button>
 
 <!-- NIVEL 1 -->
 <div id="n1" class="oculto">
-  <p>Solo una cosa…</p>
+  <p>Primero…</p>
   <p>¿Sigues porque quieres o porque no puedes evitarlo?</p>
-  <button onclick="siguiente()">Quiero</button>
-  <button onclick="siguiente()">No puedo evitarlo</button>
+  <button onclick="sig()">Quiero</button>
+  <button onclick="sig()">No puedo evitarlo</button>
 </div>
 
 <!-- NIVEL 2 -->
 <div id="n2" class="oculto">
-  <p>Ok… entonces ya sé cómo eres 😏</p>
+  <p>Ok… muy tú 😏</p>
   <p>Completa:</p>
   <p>"Sabes que no deberías… pero ____"</p>
   <input id="r1">
@@ -77,10 +77,10 @@ input {
 <!-- NIVEL 3 -->
 <div id="n3" class="oculto">
   <p>Eso pensé…</p>
-  <p>Última:</p>
-  <p>Si te acercas… ¿te detienes o sigues?</p>
-  <button onclick="final()">Me detengo</button>
-  <button onclick="final()">Sigo</button>
+  <p>Dicen que todo empieza con una mirada…</p>
+  <p>¿Qué haces tú?</p>
+  <button onclick="final()">La sostengo</button>
+  <button onclick="final()">La evito</button>
 </div>
 
 <!-- FINAL -->
@@ -90,17 +90,20 @@ input {
   <br>
   <p>No eres tan inocente como aparentas.</p>
   <br>
-  <p>Y la verdad…</p>
-  <p>yo tampoco vine a hacerme el difícil.</p>
+  <p>Y no sé si es tu forma de ver…</p>
+  <p>o cómo juegas con eso.</p>
   <br>
-  <p>Porque hay algo que llevo rato pensando…</p>
+  <p>Pero hay algo que no voy a negar.</p>
   <br>
-  <p>y no lo voy a decir directo.</p>
+  <p>Desde hace rato…</p>
+  <p>me tienes pensando más de lo normal.</p>
   <br>
-  <p>pero si estuvieras aquí…</p>
-  <p>no te preguntaría dos veces.</p>
+  <p>Y no lo voy a decir directo.</p>
   <br>
-  <p>😏</p>
+  <p>pero si estuviéramos frente a frente…</p>
+  <p>no me quedaría solo mirando.</p>
+  <br>
+  <p>💜</p>
 </div>
 
 </div>
@@ -111,16 +114,23 @@ function inicio(){
   document.getElementById("n1").style.display = "block";
 }
 
-function siguiente(){
+function sig(){
   document.getElementById("n2").style.display = "block";
 }
 
 function check1(){
   let r = document.getElementById("r1").value.toLowerCase();
-  if(r.includes("igual") || r.includes("aquí") || r.includes("aqui") || r.includes("sigo")){
+  if(
+    r.includes("igual") ||
+    r.includes("aqui") ||
+    r.includes("aquí") ||
+    r.includes("sigo") ||
+    r.includes("quiero") ||
+    r.includes("importa")
+  ){
     document.getElementById("n3").style.display = "block";
   } else {
-    alert("Tú sabes cómo va esto...");
+    alert("Sabes que sí...");
   }
 }
 
